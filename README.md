@@ -1,2 +1,16 @@
-# react-destilled
-My Notes on ReactJS
+# Array operations
+
+# Memoization
+
+
+# cleanUp on useEffect
+
+
+# Custom Hooks
+
+# useLayoutEffect
+
+# useReducer
+
+# ContextAPI
+
