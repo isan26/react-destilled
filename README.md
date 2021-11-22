@@ -2,7 +2,6 @@
 - Map
 - Filter
 - spread
-- reduce
 
 
 # [TypeScript for React](./topics/typescript/readme.md)
