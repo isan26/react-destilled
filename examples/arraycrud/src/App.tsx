@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
+
 function App() {
+  const [list, setList] = useState<string[]>([]);
+
+  const addUssr = (e: React.MouseEvent) => {
+    const ussr = ["Tal", "Karpov"];
+    setList( list => [...list, ...ussr]);
+  }
+  const removeUssr = (e: React.MouseEvent) => {
+    const noUssr = list.filter(item => item !== "Tal" && item !== "Karpov");
+    setList(noUssr);
+  }
+  const addCapablanca = (e: React.MouseEvent) => {
+    setList( list => [...list, "Capablanca"]);
+  }
+  const removeCapablanca = (e: React.MouseEvent) => {
+    const noCapablanca = list.filter(item => item !== "Capablanca");
+    setList(noCapablanca);
+  }
+
+  const replaceTal = (e: React.MouseEvent) => {
+    if (!list.includes("Tal")) {
+      alert("Tal is not in the list, click add USSR champions button");
+      return;
+    }
+
+    setList( list => list.map(item => item === "Tal" ? "Kasparov" : item));
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Array CRUD</h1>
+      <button onClick={addUssr}>Add USSR champions</button>
+      <button onClick={removeUssr}>Remove USSR champions</button>
+      <button onClick={addCapablanca}> Add Capablanca </button>
+      <button onClick={removeCapablanca}> Remove Capablanca</button>
+      <button onClick={replaceTal}> Replace Tal</button>
+      <ul>
+        {list.map((item,idx) => (<li key={idx}>{item}</li>))}
+      </ul>
     </div>
   );
 }
