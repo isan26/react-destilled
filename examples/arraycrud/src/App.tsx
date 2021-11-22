@@ -10,15 +10,13 @@ function App() {
     setList( list => [...list, ...ussr]);
   }
   const removeUssr = (e: React.MouseEvent) => {
-    const noUssr = list.filter(item => item !== "Tal" && item !== "Karpov");
-    setList(noUssr);
+    setList(list => list.filter(item => item !== "Tal" && item !== "Karpov"));
   }
   const addCapablanca = (e: React.MouseEvent) => {
     setList( list => [...list, "Capablanca"]);
   }
   const removeCapablanca = (e: React.MouseEvent) => {
-    const noCapablanca = list.filter(item => item !== "Capablanca");
-    setList(noCapablanca);
+    setList(list => list.filter(item => item !== "Capablanca"));
   }
 
   const replaceTal = (e: React.MouseEvent) => {
