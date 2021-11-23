@@ -1,4 +1,4 @@
-# [Array operations](./topics/arraycrud/readme.md)
+# [Array operations](./topics/arrays/readme.md)
 - Map
 - Filter
 - spread
