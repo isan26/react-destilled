@@ -11,7 +11,6 @@
 
 
 # [Memoization](./topics/memoization/readme.md)
-- Memoization is a technique for caching the result of an expensive function call.
 - useMemo
 - useCallback
 - memo
