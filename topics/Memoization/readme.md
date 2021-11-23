@@ -62,9 +62,9 @@ This hooks will memoize callbacks, is like useMemo but for callbacks. If the dec
             },[value])
 
             return (<ItemDetail 
-                        value={value} 
-                        increase={increase} 
-                        decrease={decrease}>)
+                     value={value} 
+                     increase={increase} 
+                     decrease={decrease} />)
         }
 
 
